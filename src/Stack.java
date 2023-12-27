@@ -1,4 +1,5 @@
 import LinkedList.LinkedList;
+import LinkedList.Node;
 
 public class Stack<T> {
 
@@ -16,6 +17,19 @@ public class Stack<T> {
      private void display(){
         list.display();
    }
+   private void pop(){
+       list.removeFrom(0);        
+     return ;
+   }
+   private T peek(){
+
+     return list.topElement() ;
+   }
+
+   private int size(){
+     
+    return list.size() ;
+   }
 
 
     public static void main(String[] args) {
@@ -26,9 +40,13 @@ public class Stack<T> {
         stack.push(30); 
         stack.push(70);
 
-        stack.display() ; 
-
-        
+   
+         while(stack.size()>0){
+             
+            int top = stack.peek() ;
+            stack.pop() ; 
+            System.out.print(top + " ");
+         }
 
     }
 }

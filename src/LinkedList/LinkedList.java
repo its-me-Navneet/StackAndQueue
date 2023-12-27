@@ -90,4 +90,7 @@ public class LinkedList<T> {
         }
         return -1;
     }
+    public T topElement(){
+        return head.data ;
+    }
 }
