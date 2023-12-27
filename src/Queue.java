@@ -21,6 +21,14 @@ public class Queue<T> {
      
     return list.size() ;
    }
+   private T front(){
+
+    return list.topElement() ;
+  }
+  private void dequeue(){
+
+    list.removeFrom(0);
+  }
 
 
     public static void main(String[] args) {
@@ -31,9 +39,14 @@ public class Queue<T> {
         Queue.enqueu(30); 
         Queue.enqueu(70);
         
-        Queue.display();
    
-     
+   
+          while(Queue.size()>0){
+             
+            int top = Queue.front() ;
+            Queue.dequeue() ; 
+            System.out.print(top + " ");
+         }
 
     }
 }
